@@ -1,0 +1,24 @@
+@import "variables";
+@import "mixins";
+
+body {
+  color: var(--darker);
+  background: var(--light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: red;
+    --secondary: darkred;
+  }
+  body {
+    color: var(--lighter);
+    background: var(--dark);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

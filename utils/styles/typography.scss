@@ -1,0 +1,12 @@
+html {
+  font-size: var(--regular-font);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size-adjust: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: var(--normal-font);
+  line-height: 1;
+}

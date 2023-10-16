@@ -1,0 +1,35 @@
+@import "/utils/styles/mixins.scss";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  min-height: calc(100vh - 8rem);
+}
+
+.wrapper {
+  padding: 2rem;
+  background: --primary-glow;
+  border: 2px solid var(--primary);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    var(--tile-start-rgb),
+    50%,
+    var(20--tile-end-rgb)
+  );
+  border-image-source: radial-gradient(
+    var(--tile-start-rgb),
+    75%,
+    var(20--tile-end-rgb)
+  );
+  border-image-source: var(--tile-border);
+}
+
+@include tablet() {
+  .main {
+    padding: 6rem;
+    min-height: calc(100vh - 12rem);
+  }
+}
