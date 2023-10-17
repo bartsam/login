@@ -5,6 +5,7 @@ import classNames from "classnames";
 
 interface ButtonProps {
   variant: "primary" | "secondary";
+  type?: "button" | "submit";
   className?: string;
   children?: React.ReactNode;
   onClick?: () => void;
@@ -13,6 +14,7 @@ interface ButtonProps {
 }
 const Button: React.FC<ButtonProps> = ({
   variant,
+  type = "button",
   className,
   children,
   onClick,
@@ -32,10 +34,10 @@ const Button: React.FC<ButtonProps> = ({
     </Link>
   ) : (
     <button
-      className={`
-    ${styles.button} 
-    ${variant ? styles[`button--${variant}`] : ""}
-  `}
+      type={type}
+      className={classNames(styles.Button, className, {
+        [styles[`Button--${variant}`]]: variant,
+      })}
       onClick={onClick}
     >
       <span>{children}</span>

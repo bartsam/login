@@ -1,4 +1,4 @@
-@import "/utils/styles/mixins.scss";
+@import "src/utils/styles/mixins.scss";
 
 .main {
   display: flex;
@@ -7,24 +7,33 @@
   align-items: center;
   padding: 4rem;
   min-height: calc(100vh - 8rem);
+  .Title {
+    text-align: center;
+    margin: 0;
+  }
 }
 
 .wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   padding: 2rem;
-  background: --primary-glow;
-  border: 2px solid var(--primary);
-  border-image-slice: 1;
-  border-image-source: linear-gradient(
-    var(--tile-start-rgb),
-    50%,
-    var(20--tile-end-rgb)
-  );
-  border-image-source: radial-gradient(
-    var(--tile-start-rgb),
-    75%,
-    var(20--tile-end-rgb)
-  );
-  border-image-source: var(--tile-border);
+  gap: 2rem;
+  // background: --primary-glow;
+  // border: 2px solid var(--primary);
+  // border-image-slice: 1;
+  // border-image-source: linear-gradient(
+  //   var(--tile-start-rgb),
+  //   50%,
+  //   var(20--tile-end-rgb)
+  // );
+  // border-image-source: radial-gradient(
+  //   var(--tile-start-rgb),
+  //   75%,
+  //   var(20--tile-end-rgb)
+  // );
+  // border-image-source: var(--tile-border);
 }
 
 @include tablet() {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import styles from "./page.module.scss";
-import "utils/styles/index.scss";
+import "src/utils/styles/index.scss";
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -17,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={font.className}>
         <main className={styles.main}>{children}</main>
       </body>

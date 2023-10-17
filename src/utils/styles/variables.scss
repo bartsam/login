@@ -1,0 +1,31 @@
+:root {
+  //Sizes
+  --max-width: 1600px;
+  --border-width: 1px;
+  --tiny-margin: 5px;
+  --small-margin: 10px;
+  --margin: 20px;
+  --large-margin: 40px;
+
+  //Font
+  --tiny-font: 0.625rem;
+  --small-font: 0.75rem;
+  --regular-font: 1em;
+  --medium-font: 1.25rem;
+  --large-font: 1.5rem;
+  --normal-font: 500;
+  --bold-font: 700;
+
+  // Colors
+  --dark: #222222;
+  --darker: #151515;
+
+  --grey: #cacaca;
+  --greyer: #888888;
+
+  --light: #f0f0f0;
+  --lighter: #ffffff;
+
+  --primary: #5903e5;
+  --secondary: #8c00fb;
+}

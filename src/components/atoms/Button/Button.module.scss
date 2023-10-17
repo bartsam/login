@@ -6,8 +6,10 @@
   min-width: 10rem;
   padding: 1rem 0.25rem;
   border-radius: 0.25rem;
-
+  cursor: pointer;
   overflow: hidden;
+  margin: 0;
+  border: 0;
   &::before {
     content: "";
     width: 100%;
@@ -22,7 +24,7 @@
     text-transform: uppercase;
     font-size: var(--small-font);
     font-weight: var(--bold-font);
-    color: var(--lighter);
+    color: var(--white);
   }
 
   &--primary {

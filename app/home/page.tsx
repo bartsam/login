@@ -3,16 +3,13 @@ import styles from "./page.module.scss";
 import Input from "@/components/atoms/Input";
 import Button from "@/components/atoms/Button";
 
-export default function Login() {
+export default function Home() {
   return (
-    <section className={styles.Login}>
-      <h1>Login</h1>
-      <Form>
-        <Input type="text" />
-      </Form>
+    <>
+      <h1>Welcome</h1>
       <Button variant="secondary" href="/">
         back
       </Button>
-    </section>
+    </>
   );
 }

@@ -8,12 +8,14 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: red;
-    --secondary: darkred;
-  }
-  body {
-    color: var(--lighter);
-    background: var(--dark);
+    --dark: #f0f0f0;
+    --darker: #ffffff;
+
+    --grey: #888888;
+    --greyer: #444444;
+
+    --light: #222222;
+    --lighter: #151515;
   }
 }
 
