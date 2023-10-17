@@ -433,3 +433,19 @@ template {
 [hidden] {
   display: none;
 }
+
+/* Toastify
+   ========================================================================== */
+
+.Toastify {
+  &__toast {
+    min-height: 48px !important;
+    &-body {
+      font-size: var(--small-font);
+      color: black;
+    }
+  }
+  &__close-button--light {
+    opacity: 1 !important;
+  }
+}

@@ -3,4 +3,4 @@ export const isValidEmail = (email: string) =>
     email
   )
     ? true
-    : "Email Address is Invalid";
+    : "Email format is invalid (domain '@error' isn't accepted)";

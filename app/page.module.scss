@@ -1,12 +1,22 @@
 @import "src/utils/styles/mixins.scss";
 
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
-  min-height: calc(100vh - 8rem);
+  padding: 30px;
+  min-height: calc(100vh - 66px);
+  border: 3px solid var(--primary);
+  border-image-slice: 1;
+  border-image-source: conic-gradient(
+    var(--primary),
+    var(--tertiary),
+    var(--secondary),
+    var(--tertiary),
+    var(--primary)
+  );
   .Title {
     text-align: center;
     margin: 0;
@@ -18,27 +28,21 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
-  gap: 2rem;
-  // background: --primary-glow;
-  // border: 2px solid var(--primary);
-  // border-image-slice: 1;
-  // border-image-source: linear-gradient(
-  //   var(--tile-start-rgb),
-  //   50%,
-  //   var(20--tile-end-rgb)
-  // );
-  // border-image-source: radial-gradient(
-  //   var(--tile-start-rgb),
-  //   75%,
-  //   var(20--tile-end-rgb)
-  // );
-  // border-image-source: var(--tile-border);
+  padding: 24px;
+  gap: 24px;
 }
 
 @include tablet() {
   .main {
-    padding: 6rem;
-    min-height: calc(100vh - 12rem);
+    border-width: 6px;
+    padding: 90px;
+    min-height: calc(100vh - 192px);
+    &::before,
+    &::after {
+      top: 6px;
+      left: 6px;
+      width: calc(100% - 12px);
+      height: calc(100% - 12px);
+    }
   }
 }

@@ -2,10 +2,10 @@
   //Sizes
   --max-width: 1600px;
   --border-width: 1px;
-  --tiny-margin: 5px;
+  --tiny-margin: 8px;
   --small-margin: 10px;
   --margin: 20px;
-  --large-margin: 40px;
+  --large-margin: 30px;
 
   //Font
   --tiny-font: 0.625rem;
@@ -20,12 +20,15 @@
   --dark: #222222;
   --darker: #151515;
 
-  --grey: #cacaca;
+  --grey: #b0b0b0;
   --greyer: #888888;
 
-  --light: #f0f0f0;
-  --lighter: #ffffff;
+  --light: #e0e0e0;
+  --lighter: #f0f0f0;
 
-  --primary: #5903e5;
-  --secondary: #8c00fb;
+  --primary: #2980f2;
+  --secondary: #579af2;
+  --tertiary: #7eb0f2;
+
+  --error: #ff2d55;
 }

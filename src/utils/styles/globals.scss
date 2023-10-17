@@ -3,13 +3,13 @@
 
 body {
   color: var(--darker);
-  background: var(--light);
+  background: var(--lighter);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --dark: #f0f0f0;
-    --darker: #ffffff;
+    --dark: #e0e0e0;
+    --darker: #f0f0f0;
 
     --grey: #888888;
     --greyer: #444444;
@@ -17,9 +17,6 @@ body {
     --light: #222222;
     --lighter: #151515;
   }
-}
-
-@media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }

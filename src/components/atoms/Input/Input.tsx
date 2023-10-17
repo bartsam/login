@@ -27,6 +27,7 @@ const Input = forwardRef(
         ref={ref}
         className={classNames(styles.wrapper, className, {
           [styles[`wrapper--${variant}`]]: variant,
+          [styles[`wrapper--error`]]: error,
         })}
       >
         <input name={name} placeholder="" {...props} />

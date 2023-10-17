@@ -26,21 +26,21 @@ const Button: React.FC<ButtonProps> = ({
       href={href}
       target={isExternal ? "_blank" : "_self"}
       onClick={onClick}
-      className={classNames(styles.Button, className, {
-        [styles[`Button--${variant}`]]: variant,
+      className={classNames(styles.wrapper, className, {
+        [styles[`wrapper--${variant}`]]: variant,
       })}
     >
-      <span>{children}</span>
+      <span className={styles.label}>{children}</span>
     </Link>
   ) : (
     <button
       type={type}
-      className={classNames(styles.Button, className, {
-        [styles[`Button--${variant}`]]: variant,
+      className={classNames(styles.wrapper, className, {
+        [styles[`wrapper--${variant}`]]: variant,
       })}
       onClick={onClick}
     >
-      <span>{children}</span>
+      <span className={styles.label}>{children}</span>
     </button>
   );
 };

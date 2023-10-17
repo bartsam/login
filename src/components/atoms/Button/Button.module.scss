@@ -1,50 +1,92 @@
-.Button {
+.wrapper {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 10rem;
-  padding: 1rem 0.25rem;
-  border-radius: 0.25rem;
+  min-height: 48px;
   cursor: pointer;
-  overflow: hidden;
   margin: 0;
   border: 0;
-  &::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-  }
-  & > span {
-    position: relative;
-    z-index: 1;
-    transition: transform 250ms ease-in;
-    text-transform: uppercase;
-    font-size: var(--small-font);
-    font-weight: var(--bold-font);
-    color: var(--white);
-  }
+  // & > span {
+  //   position: relative;
+  //   z-index: 1;
+  //   transition: transform 250ms ease-in;
+  //   text-transform: uppercase;
+  //   font-size: var(--small-font);
+  //   font-weight: var(--bold-font);
+  //   color: white;
+  // }
 
   &--primary {
-    background-color: var(--primary);
+    overflow: hidden;
+    background: linear-gradient(to left, var(--primary), var(--tertiary));
+    border-radius: 5px;
+    min-width: 200px;
+    transition: transform 250ms ease-in-out;
     &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
       background-color: var(--secondary);
-      transform: translateX(-100%);
-      transition: transform 250ms ease-in-out;
+      transform: translateX(-50%) skewX(-50deg);
+      transition: transform 500ms ease-in-out;
     }
     &:hover,
     &focus {
+      transform: scale(0.99);
       &::before {
         transform: translateX(0%);
       }
-      & > span {
+      & > .label {
         transform: scale(90%);
       }
     }
   }
   &--secondary {
-    border: 2px solid var(--secondary);
+    .label {
+      position: relative;
+      color: white;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        z-index: -1;
+        width: 100%;
+        height: 5px;
+        bottom: -3px;
+        left: 50%;
+        background-color: var(--secondary);
+        transform: translateX(-50%);
+        transition: bottom 250ms ease-in-out;
+      }
+    }
+    &:hover,
+    &focus {
+      .label::before {
+        bottom: -8px;
+      }
+    }
+  }
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+  transition: transform 250ms ease-in;
+  text-transform: uppercase;
+  font-size: var(--small-font);
+  font-weight: var(--bold-font);
+  color: white;
+}
+
+@media (prefers-color-scheme: light) {
+  .wrapper--secondary .label {
+    color: black;
+    &::before {
+      background-color: var(--secondary);
+    }
   }
 }

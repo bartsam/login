@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import styles from "./page.module.scss";
 import "src/utils/styles/index.scss";
+import "react-toastify/dist/ReactToastify.css";
 
 const font = Montserrat({ subsets: ["latin"] });
 

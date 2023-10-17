@@ -7,6 +7,8 @@ import Input from "@/components/atoms/Input";
 import Button from "@/components/atoms/Button";
 import Form from "@/components/molecules/Form";
 import { isValidEmail } from "@/utils/helper/form/isValidEmail";
+import styles from "./LoginFrom.module.scss";
+import { toast } from "react-toastify";
 
 type LoginProps = {
   email: string;
@@ -23,12 +25,24 @@ const LoginFrom = () => {
 
   const onSubmit: SubmitHandler<LoginProps> = useCallback(
     (data) => {
-      console.log(data);
-      try {
-        // if()
+      const { email, password } = data;
+      const regexEmail = /@error./;
+      const regexPassword = /^(?=.*\d).{3,}$/;
+      if (regexEmail.test(email)) {
+        toast.error("Domain '@error' isn't accepted", {
+          position: toast.POSITION.BOTTOM_RIGHT,
+          toastId: "login-error",
+        });
+      } else if (!regexPassword.test(password)) {
+        toast.error(
+          "The password must contain at least 4 characters including a number",
+          {
+            position: toast.POSITION.BOTTOM_RIGHT,
+            toastId: "login-error",
+          }
+        );
+      } else {
         push("/home");
-      } catch (e) {
-        console.log("error", e);
       }
     },
     [push]
@@ -55,7 +69,7 @@ const LoginFrom = () => {
         error={errors.password}
       />
 
-      <Button variant="primary" type="submit">
+      <Button variant="primary" className={styles.submit} type="submit">
         Submit
       </Button>
     </Form>

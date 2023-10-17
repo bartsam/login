@@ -1,12 +1,7 @@
-import Form from "@/components/molecules/Form";
 import styles from "./page.module.scss";
-import Button from "@/components/atoms/Button";
-import Input from "@/components/atoms/Input";
 import Typography from "@/components/atoms/Typography";
-import { FormEventHandler, LegacyRef, useCallback, useRef } from "react";
-import { useRouter } from "next/navigation";
-import { useForm, SubmitHandler } from "react-hook-form";
 import LoginFrom from "@/components/organisms/LoginFrom";
+import { ToastContainer, Slide } from "react-toastify";
 
 export default function Login() {
   return (
@@ -15,6 +10,7 @@ export default function Login() {
         Login
       </Typography>
       <LoginFrom />
+      <ToastContainer transition={Slide} /> 
     </div>
   );
 }
