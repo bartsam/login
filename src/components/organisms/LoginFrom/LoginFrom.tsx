@@ -6,9 +6,10 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import Input from "@/components/atoms/Input";
 import Button from "@/components/atoms/Button";
 import Form from "@/components/molecules/Form";
-import { isValidEmail } from "@/utils/helper/form/isValidEmail";
 import styles from "./LoginFrom.module.scss";
 import { toast } from "react-toastify";
+import { useLoginContext } from "@/contexts/LoginContext";
+import { isValidEmail } from "@/utils/helpers/form/isValidEmail";
 
 type LoginProps = {
   email: string;
@@ -17,6 +18,7 @@ type LoginProps = {
 
 const LoginFrom = () => {
   const { push } = useRouter();
+  const { setEmail } = useLoginContext();
   const {
     register,
     handleSubmit,
@@ -42,10 +44,11 @@ const LoginFrom = () => {
           }
         );
       } else {
-        push("/home");
+        setEmail(email);
+        push("/account");
       }
     },
-    [push]
+    [setEmail, push]
   );
 
   return (

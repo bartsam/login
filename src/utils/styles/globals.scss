@@ -2,8 +2,8 @@
 @import "mixins";
 
 body {
-  color: var(--darker);
-  background: var(--lighter);
+  color: var(--dark);
+  background: var(--light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,8 +14,8 @@ body {
     --grey: #888888;
     --greyer: #444444;
 
-    --light: #222222;
-    --lighter: #151515;
+    --light: #151515;
+    --lighter: #222222;
   }
   html {
     color-scheme: dark;

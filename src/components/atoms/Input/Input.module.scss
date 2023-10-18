@@ -13,16 +13,16 @@
   }
   input {
     font-size: var(--regular-font);
-    border-radius: var(--tiny-margin);
+    border-radius: var(--xxsmall-margin);
     border: 1px solid var(--grey);
-    padding: var(--margin) var(--margin) var(--tiny-margin) var(--margin);
-    line-height: 20px;
+    padding: var(--margin) var(--margin) var(--xxsmall-margin) var(--margin);
+    line-height: var(--margin);
     background: transparent;
     &:active,
     &:focus,
     &:not(:placeholder-shown) {
       & + label {
-        top: var(--tiny-margin);
+        top: var(--xxsmall-margin);
         color: var(--grey);
         font-size: var(--tiny-font);
         transform: translateY(0%);
@@ -47,7 +47,7 @@
   display: block;
   color: var(--error);
   font-size: var(--tiny-font);
-  margin-top: calc(var(--tiny-margin) / 2);
-  margin-left: var(--tiny-margin);
+  margin-top: calc(var(--xxsmall-margin) / 2);
+  margin-left: var(--xxsmall-margin);
   height: 0;
 }

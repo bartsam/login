@@ -1,10 +1,8 @@
 import classNames from "classnames";
-import { FC, ReactNode, FormHTMLAttributes, LegacyRef } from "react";
+import { FC, ReactNode, FormHTMLAttributes, PropsWithChildren } from "react";
 import styles from "./Form.module.scss";
 
-type FormProps = {
-  children: ReactNode;
-} & FormHTMLAttributes<HTMLFormElement>;
+type FormProps = PropsWithChildren & FormHTMLAttributes<HTMLFormElement>;
 
 const Form: FC<FormProps> = ({ children, className, ...props }) => {
   return (

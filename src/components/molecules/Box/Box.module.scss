@@ -1,0 +1,20 @@
+@import "src/utils/styles/mixins.scss";
+
+.box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - var(--xlarge-margin));
+  max-width: 340px;
+  padding: var(--large-margin);
+  gap: var(--large-margin);
+  background-color: var(--lighter);
+  border-radius: var(--small-margin);
+}
+
+@include tablet() {
+  .box {
+    padding: var(--xlarge-margin);
+    width: calc(100% - var(--xxlarge-margin));
+  }
+}
